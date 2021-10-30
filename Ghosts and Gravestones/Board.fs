@@ -78,8 +78,9 @@ type Board (args : BoardArgs) =
         breadcrumbs <- new Breadcrumb(_row, _col) :: breadcrumbs
 
     let RollbackCell(cell : Cell) =
-        cell.RollBack()
-        CheckCells()
+        if not (cell |> isNull) then
+            cell.RollBack()
+            CheckCells()
 
     let RollbackSingleMove () =
         if breadcrumbs.Length > 0 then

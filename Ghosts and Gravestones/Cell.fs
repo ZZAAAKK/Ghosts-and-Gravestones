@@ -7,6 +7,7 @@ open LocalResourceManager
 open CellState
 open CellArgs
 
+[<AllowNullLiteral>]
 type Cell (args : CellArgs) =
     let label = new Label()
     let mutable cellState = if args.IsClue then Clue elif args.IsGraveStone then Gravestone else Empty
