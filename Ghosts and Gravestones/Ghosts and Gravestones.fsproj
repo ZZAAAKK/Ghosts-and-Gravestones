@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net472</TargetFramework> 
+    <RootNamespace>Ghosts_and_Gravestones</RootNamespace> 
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="LocalResourceManager.fs" />
+    <Compile Include="GameMenu.fs" />
+    <Compile Include="CellState.fs" />
+    <Compile Include="CellArgs.fs" />
+    <Compile Include="Cell.fs" />
+    <Compile Include="BoardArgs.fs" />
+    <Compile Include="Breadcrumb.fs" />
+    <Compile Include="Board.fs" />
+    <Compile Include="UserInterface.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
